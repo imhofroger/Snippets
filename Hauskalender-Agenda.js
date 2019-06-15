@@ -207,7 +207,7 @@ Agenda = {
 		for (date in this.index) {
 			this.matrix[this.index[date].i][this.index[date].j][this.index[date].k].node.className = 'hk-agenda__day--' + this.matrix[this.index[date].i][this.index[date].j][this.index[date].k].state;
 			if (this.matrix[this.index[date].i][this.index[date].j][this.index[date].k].state == 'FF') {
-				this.matrix[this.index[date].i][this.index[date].j][this.index[date].k].node.className += (this.index[date].k == 5 ? ' hk-agenda__day--sat' : '') + (this.index[date].k == 6 ? ' hk-agenda__day--sun' : '');
+				this.matrix[this.index[date].i][this.index[date].j][this.index[date].k].node.className += (this.index[date].k == 5 ? ' hk-agenda__day--sat' : '') + (this.index[date].k == 6 ? ' hk-agenda__day--sun' : '') + (' ') + ( this.matrix[this.index[date].i][this.index[date].j][this.index[date].k].date.getFullYear()) + ( this.matrix[this.index[date].i][this.index[date].j][this.index[date].k].date.getMonth() + 1 ) + (this.matrix[this.index[date].i][this.index[date].j][this.index[date].k].date.getDate());
 			}
 			if (this.mode == 'reserve' && today > date) {
 				this.matrix[this.index[date].i][this.index[date].j][this.index[date].k].node.className += ' hk-agenda__day--past';
