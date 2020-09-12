@@ -1,0 +1,17 @@
+<service>
+  <name>Casino</name>
+  <servers>
+	 <server>
+		<name>Casino</name>
+		<url>rtmp://192.168.1.99</url>
+	 </server>
+  </servers>
+  <profiles>
+	 <profile>
+		<name>Streaming High</name>
+		<config resolution="1080p" fps="30">
+		   <bitrate>3000000</bitrate>
+		</config>
+	 </profile>
+  </profiles>
+</service>
